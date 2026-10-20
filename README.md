@@ -1,1 +1,0 @@
-# E-LKPD-interaktif-tabel-hasil-pengamatan-Agno3
