@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabel Hasil Pengamatan - Penambahan AgNO3</title>
+</head>
+<body style="margin: 0; padding: 0; background-color: transparent;">
+
+<div style="
+  font-family: 'Segoe UI', Arial, sans-serif;
+  max-width: 680px;
+  margin: 12px auto;
+  padding: 24px;
+  background: linear-gradient(145deg, #ffffff, #f0f7ff);
+  border: 1px solid #d5e7ff;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(35, 100, 180, 0.12);
+  color: #19365b;
+  box-sizing: border-box;
+">
+
+  <!-- HEADER -->
+  <div style="
+    background: linear-gradient(135deg, #1769c2, #63a7f5);
+    padding: 18px 16px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    color: white;
+    text-align: center;
+  ">
+    <div style="font-size: 28px; margin-bottom: 4px;">🧪</div>
+    <div style="font-size: 18px; font-weight: 800; letter-spacing: 0.5px;">
+      TABEL HASIL PENGAMATAN
+    </div>
+    <div style="font-size: 12px; margin-top: 4px; opacity: 0.95;">
+      Praktikum Virtual Laboratory · Pengaruh Penambahan AgNO₃
+    </div>
+  </div>
+
+  <!-- KODE KELOMPOK -->
+  <div style="margin-bottom: 20px;">
+    <label for="kode" style="
+      display: block;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #234d7d;
+    ">
+      🔑 Pilih Kode Kelompok
+    </label>
+    <select id="kode" required style="
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #bfd8f6;
+      border-radius: 10px;
+      background: #ffffff;
+      color: #234d7d;
+      font-size: 14px;
+      font-weight: 600;
+      outline-color: #438fe5;
+      box-sizing: border-box;
+    ">
+      <option value="">-- Pilih Kode Kelompok --</option>
+      <option value="KLP01">KLP01 — Kelompok 1</option>
+      <option value="KLP02">KLP02 — Kelompok 2</option>
+      <option value="KLP03">KLP03 — Kelompok 3</option>
+      <option value="KLP04">KLP04 — Kelompok 4</option>
+      <option value="KLP05">KLP05 — Kelompok 5</option>
+      <option value="KLP06">KLP06 — Kelompok 6</option>
+      <option value="KLP07">KLP07 — Kelompok 7</option>
+      <option value="KLP08">KLP08 — Kelompok 8</option>
+      <option value="KLP09">KLP09 — Kelompok 9</option>
+      <option value="KLP10">KLP10 — Kelompok 10</option>
+    </select>
+  </div>
+
+  <!-- TABEL INTERAKTIF -->
+  <div style="overflow-x: auto; margin-bottom: 20px; border-radius: 12px; border: 1px solid #bfd8f6;">
+    <table style="width: 100%; border-collapse: collapse; background: #ffffff; font-size: 12px; text-align: center;">
+      <thead>
+        <tr style="background: #e6f0fa; color: #1769c2;">
+          <th style="padding: 10px 6px; border-bottom: 2px solid #bfd8f6;">Perlakuan</th>
+          <th style="padding: 10px 6px; border-bottom: 2px solid #bfd8f6;">Vol AgNO₃ (mL)</th>
+          <th style="padding: 10px 6px; border-bottom: 2px solid #bfd8f6;">Warna</th>
+          <th style="padding: 10px 6px; border-bottom: 2px solid #bfd8f6;">Endapan</th>
+          <th style="padding: 10px 6px; border-bottom: 2px solid #bfd8f6;">[Co(H₂O)₆]²⁺ (M)</th>
+          <th style="padding: 10px 6px; border-bottom: 2px solid #bfd8f6;">[Cl⁻] (M)</th>
+          <th style="padding: 10px 6px; border-bottom: 2px solid #bfd8f6;">[CoCl₄]²⁻ (M)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Kondisi Awal -->
+        <tr style="border-bottom: 1px solid #eef5fc;">
+          <td style="padding: 8px 4px; font-weight: 700; background: #f8fbff; text-align: left;">Kondisi Awal</td>
+          <td style="padding: 4px;"><input type="number" step="any" id="vol_0" style="width: 90%; padding: 6px; border: 1px solid #bfd8f6; border-radius: 6px; text-align: center;"></td>
+          <td style="padding: 4px;"><input type="text" id="warna_0" style="width: 90%; padding: 6px; border: 1px solid #bfd8f6; border-radius: 6px; text-align: center;"></td>
+          <td style="padding: 4px;">
+            <select id="endapan_0" style="width: 95%; padding: 6px; border: 1px solid #bfd8f6; border-radius: 6px; text-align: center;">
+              <option value="-">-</option>
+              <option value="Sedikit">Sedikit</option>
+              <option value="Sedang">Sedang</option>
+              <option value="Banyak">Banyak</option>
+            </select>
+          </td>
+          <td style="padding: 4px;"><input type="number" step="any" id="co_h2o_0" style="width: 90%; padding: 6px; border: 1px solid #bfd8f6; border-radius: 6px; text-align: center;"></td>
+          <td style="padding: 4px;"><input type="number" step="any" id="cl_0" style="width: 90%; padding: 6px; border: 1px solid #bfd8f6; border-radius: 6px; text-align: center;"></td>
+          <td style="padding: 4px;"><input type="number" step="any" id="cocl4_0" style="width: 90%; padding: 6px; border: 1px solid #bfd8f6; border-radius: 6px; text-align: center;"></td>
+        </tr>
+        <!-- Penambahan AgNO3 1 -->
+        <tr style="border-bottom: 1px solid #eef5fc;">
+          <td style="padding: 8px 4px; font-weight: 700; background: #f8fbff; text-align: left;">Penambahan AgNO₃ 1</td>
+          <td style="padding: 4px;"><input type="number" step="any" id="vol_1" style="width: 90%; padding: 6px; border: 1px solid #bfd8f6; border-radius: 6px; text-align: center;"></td>
+          <td style="padding: 4px;"><input type="text" id="warna_1" style="width: 90%; padding: 6px; border: 1px solid #bfd8f6; border-radius: 6px; text-align: center;"></td>
+          <td style="padding: 4px;">
+            <select id="endapan_1" style="width: 95%; padding: 6px; border: 1px solid #bfd8f6; border-radius: 6px; text-align: center;">
+              <option value="-">-</option>
+              <option value="Sedikit">Sedikit</option>
+              <option value="Sedang">Sedang</option>
+              <option value="Banyak">Banyak</option>
+            </select>
+          </td>
+          <td style="padding: 4px;"><input type="number" step="any" id="co_h2o_1" style="width: 90%; padding: 6px; border: 1px solid #bfd8f6; border-radius: 6px; text-align: center;"></td>
+          <td style="padding: 4px;"><input type="number" step="any" id="cl_1" style="width: 90%; padding: 6px; border: 1px solid #bfd8f6; border-radius: 6px; text-align: center;"></td>
+          <td style="padding: 4px;"><input type="number" step="any" id="cocl4_1" style="width: 90%; padding: 6px; border: 1px solid #bfd8f6; border-radius: 6px; text-align: center;"></td>
+        </tr>
+        <!-- Penambahan AgNO3 2 -->
+        <tr style="border-bottom: 1px solid #eef5fc;">
+          <td style="padding: 8px 4px; font-weight: 700; background: #f8fbff; text-align: left;">Penambahan AgNO₃ 2</td>
+          <td style="padding: 4px;"><input type="number" step="any" id="vol_2" style="width: 90%; padding: 6px; border: 1px solid #bfd8f6; border-radius: 6px; text-align: center;"></td>
+          <td style="padding: 4px;"><input type="text" id="warna_2" style="width: 90%; padding: 6px; border: 1px solid #bfd8f6; border-radius: 6px; text-align: center;"></td>
+          <td style="padding: 4px;">
+            <select id="endapan_2" style="width: 95%; padding: 6px; border: 1px solid #bfd8f6; border-radius: 6px; text-align: center;">
+              <option value="-">-</option>
+              <option value="Sedikit">Sedikit</option>
+              <option value="Sedang">Sedang</option>
+              <option value="Banyak">Banyak</option>
+            </select>
+          </td>
+          <td style="padding: 4px;"><input type="number" step="any" id="co_h2o_2" style="width: 90%; padding: 6px; border: 1px solid #bfd8f6; border-radius: 6px; text-align: center;"></td>
+          <td style="padding: 4px;"><input type="number" step="any" id="cl_2" style="width: 90%; padding: 6px; border: 1px solid #bfd8f6; border-radius: 6px; text-align: center;"></td>
+          <td style="padding: 4px;"><input type="number" step="any" id="cocl4_2" style="width: 90%; padding: 6px; border: 1px solid #bfd8f6; border-radius: 6px; text-align: center;"></td>
+        </tr>
+        <!-- Penambahan AgNO3 3 -->
+        <tr>
+          <td style="padding: 8px 4px; font-weight: 700; background: #f8fbff; text-align: left;">Penambahan AgNO₃ 3</td>
+          <td style="padding: 4px;"><input type="number" step="any" id="vol_3" style="width: 90%; padding: 6px; border: 1px solid #bfd8f6; border-radius: 6px; text-align: center;"></td>
+          <td style="padding: 4px;"><input type="text" id="warna_3" style="width: 90%; padding: 6px; border: 1px solid #bfd8f6; border-radius: 6px; text-align: center;"></td>
+          <td style="padding: 4px;">
+            <select id="endapan_3" style="width: 95%; padding: 6px; border: 1px solid #bfd8f6; border-radius: 6px; text-align: center;">
+              <option value="-">-</option>
+              <option value="Sedikit">Sedikit</option>
+              <option value="Sedang">Sedang</option>
+              <option value="Banyak">Banyak</option>
+            </select>
+          </td>
+          <td style="padding: 4px;"><input type="number" step="any" id="co_h2o_3" style="width: 90%; padding: 6px; border: 1px solid #bfd8f6; border-radius: 6px; text-align: center;"></td>
+          <td style="padding: 4px;"><input type="number" step="any" id="cl_3" style="width: 90%; padding: 6px; border: 1px solid #bfd8f6; border-radius: 6px; text-align: center;"></td>
+          <td style="padding: 4px;"><input type="number" step="any" id="cocl4_3" style="width: 90%; padding: 6px; border: 1px solid #bfd8f6; border-radius: 6px; text-align: center;"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- TOMBOL SIMPAN -->
+  <button type="button" onclick="kirimTabelAgNO3()" style="
+    width: 100%;
+    padding: 14px 16px;
+    border: none;
+    border-radius: 11px;
+    background: linear-gradient(135deg, #1769c2, #3989e8);
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: inherit;
+    cursor: pointer;
+    box-shadow: 0 5px 12px rgba(23, 105, 194, 0.22);
+  ">
+    🚀 Kirim Hasil Pengamatan AgNO₃
+  </button>
+
+  <div id="st" role="status" aria-live="polite" style="
+    font-size: 12px;
+    margin-top: 12px;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.6;
+  "></div>
+
+</div>
+
+<!-- SCRIPT PENGIRIM DATA -->
+<script>
+  // Tempelkan URL Web App Apps Script (/exec) kamu di sini
+  const URL_WEB_APP = "https://script.google.com/macros/s/AKfycbxJ6LH5PtWyA4UXkOcT8q3atxiG8CmrmK5cNzx1OrSzwr8pk7oonTpseZITicvLYMtarg/exec";
+
+  function kirimTabelAgNO3() {
+    const kode = document.getElementById("kode").value.trim();
+    const st = document.getElementById("st");
+
+    if (!kode) {
+      st.innerText = "⚠️ Pilih Kode Kelompok terlebih dahulu!";
+      st.style.color = "#d9534f";
+      return;
+    }
+
+    // Merangkum seluruh isi tabel menjadi teks/format yang rapi
+    const tabelData = `
+--- KONDISI AWAL ---
+Vol AgNO3: ${document.getElementById("vol_0").value} mL | Warna: ${document.getElementById("warna_0").value} | Endapan: ${document.getElementById("endapan_0").value} | [Co(H2O)6]2+: ${document.getElementById("co_h2o_0").value} M | [Cl-]: ${document.getElementById("cl_0").value} M | [CoCl4]2-: ${document.getElementById("cocl4_0").value} M
+
+--- PENAMBAHAN AGNO3 1 ---
+Vol AgNO3: ${document.getElementById("vol_1").value} mL | Warna: ${document.getElementById("warna_1").value} | Endapan: ${document.getElementById("endapan_1").value} | [Co(H2O)6]2+: ${document.getElementById("co_h2o_1").value} M | [Cl-]: ${document.getElementById("cl_1").value} M | [CoCl4]2-: ${document.getElementById("cocl4_1").value} M
+
+--- PENAMBAHAN AGNO3 2 ---
+Vol AgNO3: ${document.getElementById("vol_2").value} mL | Warna: ${document.getElementById("warna_2").value} | Endapan: ${document.getElementById("endapan_2").value} | [Co(H2O)6]2+: ${document.getElementById("co_h2o_2").value} M | [Cl-]: ${document.getElementById("cl_2").value} M | [CoCl4]2-: ${document.getElementById("cocl4_2").value} M
+
+--- PENAMBAHAN AGNO3 3 ---
+Vol AgNO3: ${document.getElementById("vol_3").value} mL | Warna: ${document.getElementById("warna_3").value} | Endapan: ${document.getElementById("endapan_3").value} | [Co(H2O)6]2+: ${document.getElementById("co_h2o_3").value} M | [Cl-]: ${document.getElementById("cl_3").value} M | [CoCl4]2-: ${document.getElementById("cocl4_3").value} M
+    `.trim();
+
+    st.innerText = "⏳ Sedang mengirim hasil pengamatan...";
+    st.style.color = "#1769c2";
+
+    fetch(URL_WEB_APP, {
+      method: "POST",
+      mode: "no-cors",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        kode: kode,
+        // Sesuaikan nama properti di bawah ini dengan nama kolom target di Kode.gs (misalnya fase4)
+        fase4: tabelData
+      })
+    })
+    .then(() => {
+      st.innerText = "✅ Hasil Pengamatan AgNO3 Kelompok " + kode + " Berhasil Terkirim!";
+      st.style.color = "#28a745";
+    })
+    .catch(error => {
+      st.innerText = "❌ Gagal mengirim data. Silakan coba lagi.";
+      st.style.color = "#d9534f";
+    });
+  }
+</script>
+
+</body>
+</html>
